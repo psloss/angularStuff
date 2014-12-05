@@ -1,5 +1,6 @@
 var app = angular.module('main', ['ngTable']).
     controller('DemoCtrl', function($scope, ngTableParams) {
+
         var data = [
             {
                 "_id": "545163fdecf44af8e066f519",
@@ -86,4 +87,4 @@ var app = angular.module('main', ['ngTable']).
                 $defer.resolve(data.slice((params.page() - 1) * params.count(), params.page() * params.count()));
             }
         });
-    });;
+    });

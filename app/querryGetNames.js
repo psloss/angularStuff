@@ -1,14 +1,13 @@
-/**
- * Created by psloss on 11/7/2014.
- */
+
 // read mongodb datafile and convert data to JSON format
-var mongojs=require('mongojs', ['flightlog']);
+var mongojs=require('mongojs');
 var db = mongojs('planedata', ['flightlog']);
 var stringify = require('json-stringify');
+var doc =[];
 
-
-var d = db.flightlog.findOne(function(err, docs) {
-  var doc = stringify(docs);
-    console.log(doc);
+db.flightlog.find(function(err, docs) {
+  if (err) console.log(err);
+  doc = stringify(docs);
+//  console.log(answ);
+  module.exports.doc=doc;
 });
-

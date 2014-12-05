@@ -8,7 +8,8 @@
     <link data-require="bootstrap-css@*" data-semver="3.0.0" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
 
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="./app/script.js"></script>
+    <title>Flight Log Data Flights</title>
 </head>
 <body ng-app="main">
 <div ng-controller="DemoCtrl">
@@ -17,7 +18,7 @@
 
     <table ng-table="tableParams" class="table">
         <tr ng-repeat="flt in $data">
-            <td data-title="'Date'">{{flt.flt_date | limitTo:10}}</td>
+            <td data-title="'Date'">{{flt.flt_date | limitTo:25}}</td>
             <td data-title="'Hobbs Out'">{{flt.hobbs_out | number:1}}</td>
             <td data-title="'Hobbs In'">{{flt.hobbs_in | number:1}}</td>
             <td data-title="'Hours'">{{flt.hobbs_in -  flt.hobbs_out | number:1}}</td>

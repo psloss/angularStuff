@@ -1,4 +1,4 @@
-  {
+  [{
     "_id": "545163fdecf44af8e066f465",
     "id": 115,
     "flt_date": "2012-01-01 00:00:00",
@@ -2772,4 +2772,4 @@
     "oil_dipstick": 10,
     "oil_change": 0,
     "comment": "to Angola w/RMM."
-  }
+  }]

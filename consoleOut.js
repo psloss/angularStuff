@@ -1,23 +1,12 @@
 /**
- * Created by psloss on 11/10/2014.
+ * Created by psloss on 11/21/2014.
  */
-var fs=require('fs');
-var http = require('http');
-
-/*<input type="file" id="files"name="flightData
-data=getFiles('text','http://localhost/flightData');
-*/
-var content;
-
-fs.readFile("flightData", 'utf8', function(err, data){
-    if (err) {
-        return console.log("The error is: " + err);
-    }
-     console.log(data);
-    console.log(data[1].flt_date);
-});
-
-    /*[
+var doc=require('./app/querryGetNames');
+var x =[
+    {person: "poco ", "age": 60},
+    {person: "Lynes ", "age": 59}
+]
+var y = [
     {
         "_id": "545163fdecf44af8e066f465",
         "id": 115,
@@ -47,5 +36,12 @@ fs.readFile("flightData", 'utf8', function(err, data){
         "oil_dipstick": 0,
         "oil_change": "NULL",
         "comment": "NULL"
-    }]*/
-//console.log(data);
+    }]
+console.log("x type is: " + typeof x);
+console.log(" x " + x[1].person + x[0].age);
+console.log("y " + y[1].fuel_in, y[1].flt_date);
+console.log("typeof docs: " + typeof doc);
+console.log("docs: " + doc);
+doc.forEach(function(value){
+    console.log(value);
+});
